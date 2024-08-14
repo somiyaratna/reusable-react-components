@@ -1,0 +1,38 @@
+.overlay {
+  @apply fixed top-0 left-0 w-full h-screen bg-white/5 backdrop-blur-sm z-50;
+}
+
+.modal {
+  @apply fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg px-16 py-16;
+  animation: fade-in 0.3s ease-in-out;
+}
+
+.modal.fade-out {
+  animation: fade-out 0.5s ease-out;
+}
+
+.open-btn {
+  @apply bg-stone-800 text-white px-4 py-2 flex justify-center items-center rounded-md hover:bg-stone-700 transition-all duration-300 m-2;
+}
+
+.close-btn {
+  @apply p-2 rounded-sm translate-x-3 absolute top-1 right-6;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
